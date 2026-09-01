@@ -1,27 +1,15 @@
-# CRM-Power-Bi-analysis
-CRM Power Bi analysis
+CRM Sales Analytics | SQL & Power BI
 Project Overview
 
 This project analyzes a B2B CRM sales pipeline to understand what drives revenue and where commercial performance differs across products and customer segments.
 
-The dataset contains information on sales opportunities, deal stages, products, customer accounts, company characteristics, sales teams, and closed deal values. SQL Server was used to clean and validate the data, investigate data quality issues, and perform exploratory analysis. The validated data was then connected to Power BI for interactive business analysis and visualization.
+The dataset contains information on sales opportunities, deal stages, products, customer accounts, company characteristics, sales teams, and closed deal values.
 
-Business Impact
+SQL Server was used to clean and validate the data, investigate data quality issues, and perform exploratory analysis. The validated data was then connected to Power BI for interactive business analysis and visualization.
 
-This analysis provides a structured view of the factors associated with sales performance and can support more informed commercial decision-making.
+Rather than focusing only on overall sales KPIs, the analysis explores the relationship between revenue, product mix, customer size, deal value, and conversion performance to identify patterns that can support commercial decision-making.
 
-By combining revenue, conversion, product, and customer-level analysis, the dashboard can help stakeholders:
-
-Identify key revenue drivers by distinguishing between revenue generated through higher sales volume and higher average deal values.
-Evaluate revenue concentration and understand the business's dependence on its highest-performing products.
-Improve customer targeting by identifying differences in deal value and conversion performance across Small, Mid-Market, and Large accounts.
-Assess product–customer fit by highlighting products that perform differently across customer segments.
-Identify conversion opportunities where valuable customer/product combinations show comparatively lower win rates.
-Support sales prioritization by focusing attention on customer segments and products with stronger revenue potential and conversion performance.
-Monitor performance trends to detect changes in revenue, deal value, and conversion over time.
-Potential Business Value
-
-The analysis can support decisions around customer targeting, product positioning, sales resource allocation, and pipeline prioritization, helping commercial teams focus on opportunities with the strongest potential business value.
+Business Questions
 
 The Power BI dashboard is designed to answer the following business questions:
 
@@ -31,12 +19,6 @@ How does customer size influence revenue and average deal value?
 Which products perform best across different customer segments?
 Where are the biggest conversion opportunities?
 How has sales performance changed over time?
-
-Rather than focusing only on overall sales KPIs, the analysis explores the relationship between revenue, product mix, customer size, deal value, and conversion performance to identify patterns that can support commercial decision-making.
-## SQL Data Preparation & Analysis
-
-The raw CRM data was imported into SQL Server and validated before being used for analysis in Power BI.
-
 Data Model
 
 The project uses four relational tables:
@@ -46,24 +28,68 @@ accounts – customer information including sector, company revenue, employees, 
 products – product portfolio, product series, and sales prices
 sales_teams – sales agents, managers, and regional offices
 
-The tables were connected through shared business keys such as account, product, and sales agent to enable analysis across sales, customer, product, and team dimensions.
+The tables were connected through shared business keys such as account, product, and sales agent, enabling analysis across sales, customer, product, and team dimensions.
 
-### Key Steps
+SQL Data Preparation & Analysis
 
-- Reviewed table structure, data types, and data quality.
-- Standardized inconsistent categorical values.
-- Identified and corrected 1,480 inconsistent product records (`GTXPro` → `GTX Pro`).
-- Validated missing values and checked for duplicate opportunity IDs.
-- Validated relationships between pipeline, account, product, and sales team tables.
-- Calculated revenue, win rate, average deal value, sales cycle, and opportunity volume.
-- Created customer segments based on company revenue.
-- Analyzed product performance across customer segments.
+The raw CRM data was imported into SQL Server and validated before being used for analysis in Power BI.
 
-### Key Findings
+Key Steps
+Reviewed table structure, data types, and data quality.
+Standardized inconsistent categorical values.
+Identified and corrected 1,480 inconsistent product records (GTXPro → GTX Pro).
+Validated missing values and checked for duplicate opportunity IDs.
+Validated relationships between pipeline, account, product, and sales team tables.
+Calculated revenue, win rate, average deal value, sales cycle, and opportunity volume.
+Created customer segments based on company revenue.
+Analyzed product performance across customer segments.
+Key Findings
+Won deals generated approximately $10.01M in revenue with a 63.15% win rate.
+The top three products generated approximately 83.5% of total won revenue, indicating significant revenue concentration.
+Large accounts generated approximately $6.75M in won revenue.
+Large and Mid-Market accounts had almost identical average deal values of ~$2.42K, compared with ~$2.13K for Small accounts.
+Small accounts achieved the highest win rate at 64.09%, while Mid-Market accounts had the lowest at 61.22%.
+Product conversion performance varied across customer segments, suggesting that product performance should be evaluated in the context of customer type rather than in isolation.
+Power BI Dashboard
 
-- Won deals generated approximately **$10.01M in revenue** with a **63.15% win rate**.
-- The top three products generated approximately **83.5% of total won revenue**.
-- Large accounts generated approximately **$6.75M in won revenue**.
-- Large and Mid-Market accounts had almost identical average deal values of **~$2.42K**, compared with **~$2.13K for Small accounts**.
-- Small accounts achieved the highest win rate at **64.09%**, while Mid-Market accounts had the lowest at **61.22%**.
-- Product conversion performance varied across customer segments.
+The cleaned and validated SQL data was connected to Power BI to build an interactive dashboard focused on revenue performance, revenue drivers, customer segments, product performance, and conversion behavior.
+
+Revenue Performance & Drivers
+
+Business question:
+How is the business performing, and what are the key drivers of revenue?
+
+Ovde kasnije ubaciš screenshot prve Power BI stranice.
+
+Kada završimo ostale stranice, dodajemo njihove screenshots i business questions ispod njih.
+
+Business Recommendations
+
+Based on the analysis:
+
+Monitor product revenue concentration, as approximately 83.5% of won revenue is generated by the top three products.
+Prioritize Large accounts for revenue scale, while recognizing that their average deal value is nearly identical to Mid-Market accounts.
+Investigate Mid-Market conversion performance, as this segment combines high average deal value with the lowest overall win rate.
+Use product–customer segment performance when evaluating sales opportunities, since conversion rates vary across customer/product combinations.
+Investigate underperforming product–segment combinations before reallocating sales resources, as differences in conversion identify opportunities for further analysis but do not establish causation.
+Business Impact
+
+The analysis provides a structured view of the factors associated with sales performance and can support more informed commercial decision-making.
+
+By combining revenue, conversion, product, and customer-level analysis, the dashboard can help stakeholders:
+
+Identify key revenue drivers by distinguishing between sales volume and average deal value.
+Evaluate revenue concentration and dependence on highest-performing products.
+Improve customer targeting across Small, Mid-Market, and Large accounts.
+Assess product–customer fit.
+Identify potential conversion opportunities.
+Support sales and pipeline prioritization.
+Monitor changes in revenue, deal value, and conversion over time.
+Potential Business Value
+
+The analysis can support decisions around customer targeting, product positioning, sales resource allocation, and pipeline prioritization, helping commercial teams focus on opportunities with stronger potential business value.
+
+Tools & Technologies
+SQL Server / SSMS – data cleaning, validation, transformation, joins, segmentation, and exploratory analysis
+Power BI – data modeling, DAX measures, interactive analysis, and dashboard development
+DAX – revenue, win rate, average deal value, sales cycle, and customer/product performance calculations
