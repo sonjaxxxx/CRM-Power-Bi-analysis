@@ -6,6 +6,23 @@ This project analyzes a B2B CRM sales pipeline to understand what drives revenue
 
 The dataset contains information on sales opportunities, deal stages, products, customer accounts, company characteristics, sales teams, and closed deal values. SQL Server was used to clean and validate the data, investigate data quality issues, and perform exploratory analysis. The validated data was then connected to Power BI for interactive business analysis and visualization.
 
+Business Impact
+
+This analysis provides a structured view of the factors associated with sales performance and can support more informed commercial decision-making.
+
+By combining revenue, conversion, product, and customer-level analysis, the dashboard can help stakeholders:
+
+Identify key revenue drivers by distinguishing between revenue generated through higher sales volume and higher average deal values.
+Evaluate revenue concentration and understand the business's dependence on its highest-performing products.
+Improve customer targeting by identifying differences in deal value and conversion performance across Small, Mid-Market, and Large accounts.
+Assess product–customer fit by highlighting products that perform differently across customer segments.
+Identify conversion opportunities where valuable customer/product combinations show comparatively lower win rates.
+Support sales prioritization by focusing attention on customer segments and products with stronger revenue potential and conversion performance.
+Monitor performance trends to detect changes in revenue, deal value, and conversion over time.
+Potential Business Value
+
+The analysis can support decisions around customer targeting, product positioning, sales resource allocation, and pipeline prioritization, helping commercial teams focus on opportunities with the strongest potential business value.
+
 The Power BI dashboard is designed to answer the following business questions:
 
 How is the business performing, and what are the key drivers of revenue?
