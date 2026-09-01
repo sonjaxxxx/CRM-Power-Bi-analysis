@@ -37,6 +37,17 @@ Rather than focusing only on overall sales KPIs, the analysis explores the relat
 
 The raw CRM data was imported into SQL Server and validated before being used for analysis in Power BI.
 
+Data Model
+
+The project uses four relational tables:
+
+sales_pipeline – opportunities, sales agents, products, accounts, deal stages, engagement dates, close dates, and deal values
+accounts – customer information including sector, company revenue, employees, and location
+products – product portfolio, product series, and sales prices
+sales_teams – sales agents, managers, and regional offices
+
+The tables were connected through shared business keys such as account, product, and sales agent to enable analysis across sales, customer, product, and team dimensions.
+
 ### Key Steps
 
 - Reviewed table structure, data types, and data quality.
