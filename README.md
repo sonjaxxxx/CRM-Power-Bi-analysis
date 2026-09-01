@@ -1,6 +1,5 @@
 # CRM-Power-Bi-analysis
 CRM Power Bi analysis
-# CRM Power BI Analysis
 
 ## SQL Data Preparation & Analysis
 
